@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #beers {
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button-load">Carregar</button>
+    <div id="beers">
+      <h1>Guiness</h1>
+    </div>
+
+    <script>
+      const div = document.getElementById('beers');
+      const buttonLoad = document.querySelector('.button-load');
+
+      buttonLoad.addEventListener('click', toggleDiv);
+
+      let isVisible = true;
+
+      function toggleDiv() {
+        isVisible = !isVisible;
+        div.style.opacity = isVisible ? 1 : 0;
+      }
+    </script>
+  </body>
+</html>
