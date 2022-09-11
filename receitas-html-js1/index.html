@@ -4,31 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      #beers {
-        transition: 0.3s;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../global/base.css" />
+    <link rel="stylesheet" href="../global/components.css" />
+    <title>Receitas HTML-JS-1 > José Victor</title>
   </head>
   <body>
-    <button class="button-load">Carregar</button>
-    <div id="beers">
-      <h1>Guiness</h1>
+    <div class="container">
+      <button class="button-load">HIDDEN</button>
+      <div id="beers">
+        <h1>Guiness</h1>
+      </div>
     </div>
-
-    <script>
-      const div = document.getElementById('beers');
-      const buttonLoad = document.querySelector('.button-load');
-
-      buttonLoad.addEventListener('click', toggleDiv);
-
-      let isVisible = true;
-
-      function toggleDiv() {
-        isVisible = !isVisible;
-        div.style.opacity = isVisible ? 1 : 0;
-      }
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
