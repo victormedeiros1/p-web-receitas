@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../global/base.css" />
+    <link rel="stylesheet" href="../global/components.css" />
+    <title>Receitas HTML-JS-2 > José Victor</title>
     <style>
       .beer {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,22 +17,19 @@
     </style>
   </head>
   <body>
-    <button class="button-load-beers">Carregar cervejas</button>
-    <div id="beers"></div>
-
-    <script>
-      const div = document.getElementById('beers');
-      const buttonLoadBeers = document.querySelector('.button-load-beers');
-
-      buttonLoadBeers.addEventListener('click', loadBeers);
-
-      const beers = ['Heineken', 'Guiness', 'Desesperados', 'Becks'];
-
-      function loadBeers() {
-        beers.map(
-          (beer) => (div.innerHTML = `<div class="beer" >${beer}</div>`)
-        );
-      }
-    </script>
+    <div class="container">
+      <button class="button-load-beers">LOAD BEERS</button>
+      <button class="button-load-ordered-beers">LOAD ORDERED BEERS</button>
+      <button class="button-shuffle-beers">LOAD SHUFFLE BEERS</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Beers</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="./main.js"></script>
   </body>
 </html>
