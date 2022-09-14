@@ -66,6 +66,7 @@ a {
   position: relative;
   color: var(--mainDark);
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
