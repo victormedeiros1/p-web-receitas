@@ -7,9 +7,15 @@
   flex-direction: column;
 
   margin-top: 100px;
+  padding: 32px 0;
 
   gap: 16px;
 }
+/* 
+=================
+===== TABLE =====
+=================
+*/
 table {
   border-collapse: collapse;
 }
@@ -27,6 +33,11 @@ td {
   padding: 12px 22px;
 }
 
+/* 
+==================
+===== BUTTON =====
+==================
+*/
 button {
   background-color: var(--main);
   color: var(--light);
@@ -44,4 +55,19 @@ button {
 
 button:hover {
   background-color: var(--mainDark);
+}
+
+/* 
+=================
+===== LINKS =====
+=================
+*/
+a {
+  position: relative;
+  color: var(--mainDark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--mainLight);
 }
