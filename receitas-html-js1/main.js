@@ -8,5 +8,18 @@ let isVisible = true;
 function toggleDiv() {
   isVisible = !isVisible;
   buttonLoad.innerText = isVisible ? 'Hidden' : 'Show';
-  div.style.opacity = isVisible ? 1 : 0;
+
+  console.log(isVisible);
+
+  if (isVisible) {
+    div.innerHTML = `<h1>Guiness</h1>`;
+    setTimeout(() => {
+      div.style.opacity = 1;
+    }, 300);
+  } else {
+    div.style.opacity = 0;
+    setTimeout(() => {
+      div.innerHTML = '';
+    }, 300);
+  }
 }
