@@ -1,48 +1,38 @@
-svg.loading {
-  width: 100px;
-  height: 100px;
-
-  animation: loading-rotate 1.4s linear infinite;
-  -webkit-animation: loading-rotate 1.4s linear infinite;
+.container {
+  display: flex;
+  gap: 32px !important;
 }
 
-svg.loading > circle.loading__circle {
-  stroke: var(--mainDark);
-  stroke-dasharray: 80px, 200px;
-  stroke-dashoffset: 0px;
-
-  animation: loading-stroke-circle 1.4s ease-in-out infinite;
-  -webkit-animation: loading-stroke-circle 1.4s ease-in-out infinite;
-}
-svg.loading > circle.loading__circle:hover {
-  stroke: var(--main);
+h1 {
+  text-align: center;
 }
 
-@keyframes loading-rotate {
-  0% {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-  }
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  gap: 16px;
+}
+.form-group {
+  flex: 1;
 }
 
-@keyframes loading-stroke-circle {
-  0% {
-    stroke-dasharray: 1px, 200px;
-    stroke-dashoffset: 0;
-  }
+label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+label:hover {
+  background-color: var(--mainDark);
+}
+input {
+  display: none;
+}
 
-  50% {
-    stroke-dasharray: 100px, 200px;
-    stroke-dashoffset: -15px;
-  }
-
-  100% {
-    stroke-dasharray: 100px, 200px;
-    stroke-dashoffset: -125px;
-  }
+input:checked ~ label {
+  background-color: var(--main);
 }
