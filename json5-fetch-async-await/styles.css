@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  gap: 32px !important;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  gap: 16px;
+}
+.form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+label:hover {
+  background-color: var(--mainDark);
+}
+input {
+  display: none;
+}
+
+input:checked ~ label {
+  background-color: var(--main);
+}

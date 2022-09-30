@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./loading.css" />
+    <link rel="stylesheet" href="../global/base.css" />
+    <link rel="stylesheet" href="../global/components.css" />
+    <title>Receita JSON5 > José Victor</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Selecione quantos elementos <br />deseja puxar na REQUEST</h1>
+      <div class="form">
+        <div class="form-group">
+          <input
+            id="5"
+            class="checkbox"
+            type="radio"
+            name="quantity"
+            value="5"
+          />
+          <label for="5">5</label>
+        </div>
+        <div class="form-group">
+          <input
+            id="10"
+            class="checkbox"
+            type="radio"
+            name="quantity"
+            value="10"
+          />
+          <label for="10">10</label>
+        </div>
+        <div class="form-group">
+          <input
+            id="20"
+            class="checkbox"
+            type="radio"
+            name="quantity"
+            value="20"
+          />
+          <label for="20">20</label>
+        </div>
+        <div class="form-group">
+          <input
+            id="100"
+            class="checkbox"
+            type="radio"
+            name="quantity"
+            value="100"
+          />
+          <label for="100">100</label>
+        </div>
+      </div>
+      <button class="button-load">SEARCH</button>
+
+      <table>
+        <thead></thead>
+        <tbody>
+          <div class="loading-box">
+            <svg class="loading" viewBox="22 22 44 44">
+              <circle
+                class="loading__circle"
+                stroke="white"
+                stroke-width="3.6"
+                fill="transparent"
+                r="20.2"
+                cx="44"
+                cy="44"
+              />
+            </svg>
+          </div>
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
