@@ -18,8 +18,10 @@
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
+      const Cabecalho = () => <h1>Minha tabela de bebidas</h1>;
       const TabelaBebidas = () => (
         <div id="app">
+          <Cabecalho />
           <table id="tabela" border="1">
             <thead>
               <tr>
