@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ReceitaReact - Classes</title>
+    <link rel="stylesheet" href="../global/base.css" />
+    <link rel="stylesheet" href="../global/components.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script src="./react.js"></script>
+    <script src="./react-dom.js"></script>
+    <script src="./babel.js"></script>
+    <script type="text/babel">
+      class TabelaBebidas extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>{this.props.titulo}</h1>
+              <table id="tabela" border="1">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Havana</td>
+                    <td>Engenho Anísio Santiago</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+      }
+
+      class Card extends React.Component {
+        render() {
+          return (
+            <article>
+              <h2>Uma notícia sem nexo nenhum</h2>
+              <p>
+                A descrição dessa notícia sem sentido faz mais sentido que o
+                título dela
+              </p>
+              <span>07/10/2022</span>
+            </article>
+          );
+        }
+      }
+      class App extends React.Component {
+        render() {
+          return (
+            <div className="container">
+              <TabelaBebidas titulo="Tabela de Lindona" />
+              <Card />
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <App />,
+
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>
