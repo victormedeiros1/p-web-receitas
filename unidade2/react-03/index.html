@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ReceitaReact - Classes</title>
+    <link rel="stylesheet" href="../global/base.css" />
+    <link rel="stylesheet" href="../global/utils.css" />
+    <link rel="stylesheet" href="../global/components.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script src="./react.js"></script>
+    <script src="./react-dom.js"></script>
+    <script src="./babel.js"></script>
+    <script type="text/babel">
+      class TabelaBebidas extends React.Component {
+        render() {
+          return (
+            <div className="text-center">
+              <h1>{this.props.titulo}</h1>
+              <table id="tabela" border="1">
+                <thead>
+                  <tr>
+                    {cabecalhos.map((cabecalho) => (
+                      <th key={cabecalho}>{cabecalho}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {cervejas.map(({ id, name, alcohol, ibu, style }) => (
+                    <tr key={id}>
+                      <td>{name}</td>
+                      <td>{alcohol}</td>
+                      <td>{ibu}</td>
+                      <td>{style}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+      }
+
+      const cabecalhos = ['Nome', 'Álcool %', 'Ibu', 'Style'];
+      const cervejas = [
+        {
+          id: 0,
+          name: 'Heineken',
+          alcohol: '10%',
+          ibu: '30',
+          style: 'Red Ale',
+        },
+        {
+          id: 1,
+          name: 'Guiness',
+          alcohol: '20%',
+          ibu: '22',
+          style: 'English IPA',
+        },
+        {
+          id: 2,
+          name: 'Desesperados',
+          alcohol: '5%',
+          ibu: '21',
+          style: 'Imperial Stout',
+        },
+        { id: 3, name: 'Becks', alcohol: '30%', ibu: '43', style: 'Cream Ale' },
+      ];
+      class App extends React.Component {
+        render() {
+          return (
+            <div className="container">
+              <TabelaBebidas
+                titulo="Tabela Lindona"
+                cabecalhos={cabecalhos}
+                cervejas={cervejas}
+              />
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <App />,
+
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>
