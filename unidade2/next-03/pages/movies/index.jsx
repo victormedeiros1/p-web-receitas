@@ -12,21 +12,26 @@ export async function getServerSideProps(context) {
 }
 
 const Movies = ({ data }) => {
+  console.log(data);
   return (
     <div>
       <form>
-        <label for="text">Pesquise por título</label>
-        <input id="text" name="text" type="text" />
+        <label htmlFor="text-input">Pesquise por título</label>
+        <input id="text-input" name="text" type="text" />
         <input type="submit" value="Enviar" />
       </form>
 
       <div>
-        {data.Search.map(({ imdbID, Year, Title, Poster }) => (
-          <div key={imdbID}>
-            {Title} --- {Year}
-            <img width="100 " src={Poster} />
-          </div>
-        ))}
+        {data.Error ? (
+          <div>Nada encontrado</div>
+        ) : (
+          data.Search.map(({ imdbID, Year, Title, Poster }) => (
+            <div key={imdbID}>
+              {Title} --- {Year}
+              <img width="100 " src={Poster} />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
