@@ -8,7 +8,6 @@ export default function Movies({ data }) {
         <br />
         {data.Title} --- {data.Year}
       </div>
-      <a href="./">Movies2</a>
     </div>
   );
 }
