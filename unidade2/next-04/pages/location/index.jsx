@@ -13,7 +13,7 @@ export default function Location() {
     borderBottom: '1px solid #ccc',
     fontFamily: 'Verdana, sans-serif',
     margin: 0,
-    padding: '4 0',
+    padding: '4px 0',
   };
 
   return (
