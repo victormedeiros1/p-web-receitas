@@ -12,7 +12,6 @@ export async function getServerSideProps(context) {
 }
 
 const Movies = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <form>
