@@ -2,6 +2,7 @@ import useSWR from 'swr';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
+import Link from 'next/link';
 
 export default function Movies() {
   const [url, setUrl] = useState('');
@@ -53,7 +54,9 @@ export function TheMovies({ data, show }) {
           <Card>
             <Card.Img style={{ width: '200px' }} variant="top" src={m.Poster} />
             <Card.Body>
-              <Card.Title>{m.Title}</Card.Title>
+              <Card.Title>
+                <Link href={`/movie/${m.imdbID}`}>{m.Title}</Link>
+              </Card.Title>
               <Card.Text>
                 {m.Year} --- Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit, sed do eiusmod tempor incididunt ut labore et dolore magna
