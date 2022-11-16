@@ -19,16 +19,16 @@ export function TheForm() {
 }
 
 export function TheMovies({ data, show }) {
+  console.log(data.Search);
   if (!show) return <div></div>;
 
   if (!data) return <div></div>;
 
   if (data.error) return <div>falha na pesquisa</div>;
 
-  if (data.Search === '') return <div>carregando...</div>;
+  if (data.Search === '') return <div>Carregando...</div>;
 
   if (data.Error) return <div>{data.Error}</div>;
-
   return (
     <div>
       {data.Search.map((m) => (
@@ -43,8 +43,7 @@ export function TheMovies({ data, show }) {
 export function TheLink({ url, handler }) {
   return (
     <div>
-      <a href="/movies3.js" onClick={handler}>
-        {' '}
+      <a href="#" onClick={handler}>
         {url === '' ? 'Mostrar' : 'Ocultar'}{' '}
       </a>
     </div>
@@ -73,6 +72,11 @@ export default function Movies() {
     e.preventDefault();
 
     let s = document.getElementById('titleSearchString').value;
+
+    if (s === '') {
+      alert('Digite algo');
+      return <div>Digite algo</div>;
+    }
 
     if (state.url === '') {
       setState({ url: 'http://www.omdbapi.com', titleSearchString: s });
