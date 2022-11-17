@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Link from 'next/link';
 
 export default function Movies() {

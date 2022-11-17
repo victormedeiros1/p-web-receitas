@@ -14,7 +14,6 @@ export default function Movies({ data }) {
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua.
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>
     </div>
