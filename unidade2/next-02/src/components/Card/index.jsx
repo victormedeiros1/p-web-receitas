@@ -1,16 +1,22 @@
-const Card = ({ title, description }) => {
+import Image from 'next/image';
+
+const Card = ({ title, description, thumb }) => {
   return (
     <article
       style={{
-        maxWidth: '256px',
+        color: '#fff',
+        backgroundColor: '#00333F',
+        fontFamily: 'verdana',
+        maxWidth: '400px',
         width: 'fit-content',
         border: '1px solid #222',
-        padding: '8px',
+        padding: '16px',
+        margin: 'auto',
       }}
     >
-      <img src="https://picsum.photos/256/256" />
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <Image src={thumb} objectFit="contain" />
+      <h3 style={{ fontWeight: 700 }}>{title}</h3>
+      <p style={{ fontSize: 12 }}>{description}</p>
     </article>
   );
 };
