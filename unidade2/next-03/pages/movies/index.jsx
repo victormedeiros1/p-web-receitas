@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import { Card } from 'react-bootstrap';
+
 export async function getServerSideProps(context) {
   const { text } = context.query;
   const res = await fetch(`http://www.omdbapi.com/?apikey=1ecf8ec3&s=${text}`);
@@ -20,15 +23,15 @@ const Movies = ({ data }) => {
         <input type="submit" value="Enviar" />
       </form>
 
-      <div>
+      <div className="d-flex flex-wrap gap-4">
         {data.Error ? (
           <div>Nada encontrado</div>
         ) : (
           data.Search.map(({ imdbID, Year, Title, Poster }) => (
-            <div key={imdbID}>
+            <Card className="p-3" key={imdbID}>
+              <img width="100%" src={Poster} />
               {Title} --- {Year}
-              <img width="100 " src={Poster} />
-            </div>
+            </Card>
           ))
         )}
       </div>
