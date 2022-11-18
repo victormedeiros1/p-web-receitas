@@ -29,7 +29,7 @@ const Movies = ({ data }) => {
         ) : (
           data.Search.map(({ imdbID, Year, Title, Poster }) => (
             <Card className="p-3" key={imdbID}>
-              <img width="100%" src={Poster} />
+              <img width="200" height="200" src={Poster} />
               {Title} --- {Year}
             </Card>
           ))
