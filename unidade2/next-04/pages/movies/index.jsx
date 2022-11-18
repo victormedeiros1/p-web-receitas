@@ -11,14 +11,16 @@ const Movies = () => {
   if (!data) return <div>carregando...</div>;
 
   return (
-    <div>
+    <ul>
       {data.Search.map((m) => (
-        <div key={m.imdbID}>
-          <Link href={`/movie/${m.imdbID}`}>{m.Title}</Link>
-          --- {m.Year}
-        </div>
+        <li style={{ padding: 8, fontFamily: 'verdana' }} key={m.imdbID}>
+          <Link style={{ textDecoration: 'none' }} href={`/movie/${m.imdbID}`}>
+            {m.Title}{' '}
+          </Link>
+          - {m.Year}
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

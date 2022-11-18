@@ -3,10 +3,12 @@ import { useRouter } from 'next/router';
 export default function Movies({ data }) {
   return (
     <div>
-      <div>
+      <div style={{ maxWidth: 300, border: '1px solid gray', margin: 'auto' }}>
         <img src={data.Poster}></img>
         <br />
-        {data.Title} --- {data.Year}
+        <p style={{ fontFamily: 'verdana' }}>
+          {data.Title}- {data.Year}
+        </p>
       </div>
     </div>
   );
