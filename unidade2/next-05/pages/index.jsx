@@ -1,5 +1,7 @@
+import Link from 'next/link';
+
 const Home = () => {
-  return <div>Home</div>;
+  return <Link href="/movies">Movies</Link>;
 };
 
 export default Home;
